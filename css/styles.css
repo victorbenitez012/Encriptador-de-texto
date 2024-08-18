@@ -1,0 +1,35 @@
+﻿/*
+    fuentes
+*/
+@import url('https://fonts.googlepis.com/css2?family-Inter&display=swap');
+
+/*
+    Global Css
+*/
+root{
+    --Font:#E5E5E5;
+    --White:#FFFFFF;
+    --Dark-Blue:#0A3871;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter', sans-serif;
+    text-decoration: none;
+    background: var(--White);
+}
+::selection {
+    background: var(--Dark-Blue);
+}
+body{
+    height: 100%;
+}
+
+img{
+    max-width: 100%;
+}
+
+/*
+    Encabezado
+*/
