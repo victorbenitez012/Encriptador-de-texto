@@ -3,27 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto de Encriptación</title>
+    <title>Enctriptador de texto</title>
+    <link rel="icon" type="image/x-icon" href="./imagenes/favicon.ico" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Encabezado-->
     <header>
+        <a href="#" rel="">
+            <img src="./imagenes/logo.svg" alt="Logo Alura" class="logo" />
+        </a>
         <h1>Encriptador de Textos</h1>
     </header>
+    <!-- Principal-->
     <main>
-        <section>
-            <label for="textInput">Texto para encriptar/desencriptar:</label>
-            <textarea id="textInput" rows="4" cols="50" placeholder="Ingresa el texto aquí..."></textarea>
-            <p id="validationMessage" style="color: red;"></p>
+        <section class="encriptador">
+            <textarea class="encriptar" placeholder="Ingrese el texto aqui"></textarea>
+            <div class="encriptador-aviso">
+                <img src="./imagenes/aviso.svg" alt="Imagen Aviso" class="imag-aviso" />
+                <p class="texto-aviso">Solo letras minusculas y sion acentos</p>
+            </div>
+            <div class="encriptador-contenedor">
+                <button type="submit" class="btn-encriptar">Encriptar</button>
+                <button type="submit" class="btn-descriptar">Desencriptar</button>
+            </div>
         </section>
-        <section>
-            <button onclick="encriptarTexto()">Encriptar</button>
-            <button onclick="desencriptarTexto()">Desencriptar</button>
-            <button onclick="copiarTexto()">Copiar</button>
-        </section>
-        <section>
-            <h2>Resultado:</h2>
-            <p id="result" style="border: 1px solid black; padding: 10px;"></p>
+        <section class="tarjeta">
+            <div class=""
         </section>
     </main>
     <footer>
