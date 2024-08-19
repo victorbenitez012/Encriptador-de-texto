@@ -53,3 +53,4 @@ Este proyecto es una aplicación web que permite encriptar y desencriptar textos
 - Desarrollado por Víctor Benítez.
 - Iconos y gráficos proporcionados por Alura.
 - Tutorial seguido de OTorresDev en [YouTube](https://www.youtube.com/watch?v=Va3C3b-D-pg).
+- Se uso asistencia de chatgpt.
