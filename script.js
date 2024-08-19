@@ -117,4 +117,5 @@ btnCopiar.addEventListener("click", e => {
     let copiar = respuesta;
     copiar.select();
     document.execCommand("copy");
+    alert("Texto copiado al portapapeles");
 });

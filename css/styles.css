@@ -54,7 +54,7 @@ header {
         align-items: flex-start;
         width: 120px;
         height: 48px;
-    }
+    }   
 /*
     Principal
 */
@@ -236,6 +236,7 @@ main {
     visibility: hidden;
     padding: 24px;
     font-size: 16px;
+    color: var(--Dark-Blue);
     line-height: 19px;
     text-align: center;
     background: var(--White-Blue);
