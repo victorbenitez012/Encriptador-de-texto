@@ -45,16 +45,19 @@ img {
     Encabezado
 */
 header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    margin: 40px 0px 0px 40px;
+    margin: 40px 100px 0px 40px;
 }
 
     header .logo {
         display: flex;
         align-items: flex-start;
-        width: 120px;
+        width: 64px;
         height: 48px;
-    }   
+    }    
 /*
     Principal
 */
