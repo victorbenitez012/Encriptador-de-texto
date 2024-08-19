@@ -1,51 +1,62 @@
-// Función para encriptar el texto
-function encriptarTexto() {
-    const input = document.getElementById('textInput').value;
-    const validationMessage = document.getElementById('validationMessage');
-    if (validarTexto(input)) {
-        validationMessage.textContent = '';
-        const encriptado = input
+document.addEventListener("DOMContentLoaded", function () {
+    const textareaEncriptar = document.querySelector(".encriptar");
+    const textareaEvaluar = document.querySelector(".evaluar");
+    const btnEncriptar = document.querySelector(".btn-encriptar");
+    const btnDesencriptar = document.querySelector(".btn-desencriptar");
+    const btnCopiar = document.querySelector(".btn-copiar");
+
+    // Función para encriptar texto
+    function encriptarTexto(texto) {
+        let textoEncriptado = texto
             .replace(/e/g, "enter")
             .replace(/i/g, "imes")
             .replace(/a/g, "ai")
             .replace(/o/g, "ober")
             .replace(/u/g, "ufat");
-        document.getElementById('result').textContent = encriptado;
-    } else {
-        validationMessage.textContent = 'No se aceptan mayúsculas, acentos ni caracteres especiales.';
+        return textoEncriptado;
     }
-}
 
-// Función para desencriptar el texto
-function desencriptarTexto() {
-    const input = document.getElementById('textInput').value;
-    const validationMessage = document.getElementById('validationMessage');
-    if (validarTexto(input)) {
-        validationMessage.textContent = '';
-        const desencriptado = input
+    // Función para desencriptar texto
+    function desencriptarTexto(texto) {
+        let textoDesencriptado = texto
             .replace(/enter/g, "e")
             .replace(/imes/g, "i")
             .replace(/ai/g, "a")
             .replace(/ober/g, "o")
             .replace(/ufat/g, "u");
-        document.getElementById('result').textContent = desencriptado;
-    } else {
-        validationMessage.textContent = 'No se aceptan mayúsculas, acentos ni caracteres especiales.';
+        return textoDesencriptado;
     }
-}
 
-// Función para validar el texto
-function validarTexto(texto) {
-    const regex = /^[a-z\s]*$/; // Solo minúsculas y espacios
-    return regex.test(texto);
-}
-
-// Función para copiar el texto
-function copiarTexto() {
-    const result = document.getElementById('result').textContent;
-    navigator.clipboard.writeText(result).then(() => {
-        alert('Texto copiado al portapapeles');
-    }).catch(err => {
-        console.error('Error al copiar el texto: ', err);
+    // Evento para encriptar texto
+    btnEncriptar.addEventListener("click", function () {
+        let texto = textareaEncriptar.value;
+        if (texto.trim() !== "") {
+            let textoEncriptado = encriptarTexto(texto);
+            textareaEvaluar.value = textoEncriptado;
+            textareaEvaluar.style.visibility = "visible";
+            btnCopiar.style.visibility = "visible";
+        }
     });
-}
+
+    // Evento para desencriptar texto
+    btnDesencriptar.addEventListener("click", function () {
+        let texto = textareaEncriptar.value;
+        if (texto.trim() !== "") {
+            let textoDesencriptado = desencriptarTexto(texto);
+            textareaEvaluar.value = textoDesencriptado;
+            textareaEvaluar.style.visibility = "visible";
+            btnCopiar.style.visibility = "visible";
+        }
+    });
+
+    // Evento para copiar texto al portapapeles
+    btnCopiar.addEventListener("click", function () {
+        textareaEvaluar.select();
+        document.execCommand("copy");
+        alert("Texto copiado al portapapeles");
+    });
+
+    // Oculta el botón de copiar y el textarea de evaluación al inicio
+    btnCopiar.style.visibility = "hidden";
+    textareaEvaluar.style.visibility = "hidden";
+});
