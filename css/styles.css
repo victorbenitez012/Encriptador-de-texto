@@ -225,7 +225,7 @@ main{
 }
 
 .btn-copiar {
-    width: 224;
+    width: 224px;
     height: 67px;
     margin: 23px;
     position: absolute;
@@ -233,7 +233,6 @@ main{
     left: 0;
     visibility: hidden;
     padding: 24px;
-    font-style: normal;
     font-size: 16px;
     line-height: 19px;
     text-align: center;
