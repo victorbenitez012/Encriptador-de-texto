@@ -64,7 +64,7 @@ header {
 main {
     display: flex;
     flex-direction: row;
-    background: url(../imagenes/portada.png) no-repeat;
+    background: url(../imagenes/portada1.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
