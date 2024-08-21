@@ -130,7 +130,9 @@ main {
     line-height: 19px;
     text-align: center;
     color: var(--White);
-    background: var(--Dark-Blue);
+    /*background: var(--Dark-Blue);*/
+    background: none;
+    background-color: var(--Dark-Blue);
     border: 1px solid var(--Dark-Blue);
     border-radius: 24px;
     cursor: pointer;
