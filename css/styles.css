@@ -17,6 +17,8 @@
     --Medium-Blue: #0a38718a;
     --Gray: #343a40;
     --Gree: #495057;
+    --Green: #34b71b;
+    --Red: #ff0000 ;
 }
 
 * {
@@ -49,7 +51,8 @@ header {
     justify-content: center;
     align-items: center;
     position: absolute;
-    margin: 40px 100px 0px 40px;
+    margin: 40px 100px 0px 40px;    
+    opacity: 80%;
 }
 
     header .logo {
@@ -57,6 +60,7 @@ header {
         align-items: flex-start;
         width: 64px;
         height: 48px;
+        
     }    
 /*
     Principal
@@ -72,7 +76,8 @@ main {
 .encriptador {
     width: 60%;
     margin: 168px 0px 0px 140px;
-    background: transparent;
+    background: none;
+    opacity: 80%;
 }
 
 .encriptar {
@@ -99,6 +104,7 @@ main {
     gap: 8px;
     position: absolute;
     top: 500px;
+    background: none;
 }
 
 .texto-aviso {
@@ -108,7 +114,8 @@ main {
     font-size: 18px;
     line-height: 150%;
     opacity: 0.8;
-    color: var(--Medium-Greey);
+    color: var(--Red);
+    background: var(--White-Blue);
 }
 
 .encriptador-contenedor {
@@ -118,6 +125,7 @@ main {
     gap: 8px;
     position: absolute;
     top: 526px;
+    background: none;
 }
 
 .btn-encriptar {
@@ -129,11 +137,10 @@ main {
     font-size: 16px;
     line-height: 19px;
     text-align: center;
-    color: var(--White);
-    /*background: var(--Dark-Blue);*/
-    background: none;
+    color: var(--White);    
+    background: var(--Dark-Blue);
     background-color: var(--Dark-Blue);
-    border: 1px solid var(--Dark-Blue);
+    border: 1px solid var(--Green);
     border-radius: 24px;
     cursor: pointer;
     box-shadow: 0px 20px 29px -5px var(--RGBA);
@@ -176,6 +183,7 @@ main {
     margin-top: 40px;
     border-radius: 32px;
     text-align: center;
+    opacity: 80%;
 }
 
 .tarjeta-contenedor {
